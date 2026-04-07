@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>文字圖片左右排列</title>
+
+  <style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 50px auto;
+    }
+
+    .text {
+      flex: 1;
+      padding-right: 20px;
+      font-size: 18px;
+    }
+
+    .image img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* 手機版 */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="text">
+      這是一段文字內容，你可以放介紹、說明或任何文字。
+      這裡會在左邊顯示。
+    </div>
+
+    <div class="image">
+      <img src="https://via.placeholder.com/250" alt="示意圖片">
+    </div>
+  </div>
+
+</body>
+</html>
