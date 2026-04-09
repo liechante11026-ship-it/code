@@ -17,14 +17,19 @@
                 <p style="color:rgb(9, 120, 55); font-family: Arial, sans-serif;">基本資料</p>
                 
                 <h3 >學校:私立弘文高級中學</h3>
-                <h3>姓名:賴香臻。</h3>
+                <h3>姓名:賴香臻</h3>
                 <h3>生日:96年11月26日</h3>
                 <h3>信箱:liechante11026@gmail.com</h3>
             </div>
-            <div class="card3">
+            
+
+            <div class="box">
                 
-            <h4>練習表格與清單</h4>
-            <h4 position="right";ing src="image/社團.webp" alt="社團" width="280" >高中參加社團</h4>
+            <h4>高中參加社團</h4>
+            <p>百字簡述</p>
+            <p>在高中三年期間，我透過粉彩社、羊毛氈社與袖珍屋製作，磨練出專注力與耐心，特別是在袖珍屋製作中，必須靜下心來完成作品，在很多小零件裡找到其專屬位置，這培養了我對細節的要求，此外，擔任羊毛氈社副社長時，在我與社長與其他幹部共同完成期末成果整合的過程中，我深刻體會到分工是團隊運作的核心，讓我意識到一個人不一定要獨自承擔所有事情，需透過團隊協作才能走得長遠且穩健，這些經歷使我練就出軟實力讓我能挑戰時不會三心二意。</p>
+            <img src="image/社團.webp" alt="社團" width="280" >
+            </div>
             <h5> 
                 <p>課表
                 <table border="1">
@@ -62,17 +67,12 @@
                     </tr>
                 </table>
                 </p>
-            
             </h5>
+            
             </div>
 
             <h6> 
-            <p>高中參加社團</p>
-            <ul>
-                <li>粉彩社</li>
-                <li>袖珍屋</li>
-                <li>羊毛氈社</li>
-            </ul>    
+          
             </h6>
             <h8> 
             <p>喜好科目</p>
@@ -97,30 +97,72 @@
         </body>
 </html>
 <style>
+    .container {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    /* margin: 30px auto; */
+    /* gap: 20px;  元素之間的間距 */
+    background-color: #ffd398;
+    }
+     .text {
+    padding-right: 0;
+    margin-bottom: 20px;
+    flex: 1;
+    padding-right: 20px;
+    font-size: 18px;
+    }
+    .card {
+        display: flex; 
+        align-items: center; /* 垂直置中 */
+        justify-content: space-between; /* 水平分散 */
+        background-color: #fff7b3;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #006668;
+
+        /*width: 500px; /* 最大寬度 */
+        /*height: 350px; /* 固定高度 */
+        /* 有加上max-width/height 的話就不會超過設定大小，但如果內容不足450px就會自動縮小，這樣就不會有空白的問題了 */
+    }
+    .card2 {
+        display: flex;
+        align-items: center; /* 垂直置中 */
+        justify-content: space-between; /* 水平分散 */
+        background-color: #c8ffbc;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #006668;
+       /* width: 500px;
+        height: 350px;*/
+    }
+    .box {
+        display: flex;
+        align-items: center; /* 垂直置中 */
+        justify-content: space-between; /* 水平分散 */
+        background-color: #eeffeb;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #000000;
+    }
     a{
-        color: rgb(4, 113, 113);
+        color: rgb(28, 242, 242);
         text-decoration: none;
     }
     a:hover{
         text-decoration: underline;
     }
-    .card {
-        background-color: rgb(178, 241, 213);
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .card2 {
-        background-color: rgb(224, 244, 173);
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
     .card3{
+        display: flex;
+        justify-content: space-between; /* 水平分散 */
         background-color: rgb(251, 235, 192);
         border: 1px solid #ccc;
         border-radius: 5px;
