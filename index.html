@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
     <title>HTML Tutorial</title>
-        <body>
+        <body onload="startSlideshow()">
+            
             <div class="card">
 
                 <h1>
                     <p style="color:rgb(3, 86, 86); font-family: Arial, sans-serif;text-align: center;">多元綜整心得</p>
-                
+                    <p>社團圖片</p>
+                   
+                        <div id="containerPhoto">
+                        <img src="image/羊毛氈.jpg"  width="800">
+                        </div>
+                        
+                        
                 </h1>
                 <h2>
                         <a href="https://www.hwhs.tc.edu.tw/home">我的學校</a>
@@ -72,7 +79,33 @@
             </div>
 
             <h6> 
-          
+                <div = "container">
+                    <div=id="APCS onMouseOver=""showAPCS()">
+                        <p>APCS</p>
+                        <img src="image/APCS.webp" alt="APCS" width="280" >
+
+                </div>
+                                <div class="container">
+                            <h1>證書檢定</h1>
+                            <div id="APCS" onMouseOver="showAPCS()" style="width: 500px;">
+                                APCS(2020/10/17) 3/2
+                            </div>
+
+                            <div id="APCS_ceri" style="display: none; max-width: 400px; max-height: 300px;">
+                                <img src="ceri/apcs.webp" alt="示意圖片" style="max-width: 100%; max-height: 100%;">
+                            </div>
+
+                            <div id="TOEIC" onMouseOver="showTOEIC()" style="width: 500px;">
+                                TOEIC(2020/10/17) 550
+                            </div>
+
+                            <div id="TOEIC_ceri" style="display: none; max-width: 400px; max-height: 300px;">
+                                <img src="ceri/toeic.jpeg" alt="示意圖片" style="max-width: 100%; max-height: 100%;">  
+                            </div>
+
+                            <iframe width="800px" height="600px" src="file/代數學一.pdf" title="file example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                </div>
             </h6>
             <h8> 
             <p>喜好科目</p>
@@ -96,7 +129,45 @@
             </h9>
         </body>
 </html>
+<script>
+    let images = [
+        "image/羊毛氈-1.jpg",
+        "image/袖珍屋-1.jpg"
+    ];
+    let index = 0;
+    let imgElement = document.getElementById("containerPhoto");
+    let timer;
+    function startSlideshow() {
+        timer=setInterval(() => {
+            index = (index + 1) % images.length;
+            imgElement.innerHTML = `<img src="${images[index]}" alt="示意圖片" style="width: 800px; max-height: 600px;">`;
+            
+        }, 3000);
+    }
+    function stopSlideshow() {
+        clearInterval(timer);
+    }
+     function showNextImage() { // 顯示下一張圖片
+        index = (index + 1) % images.length;
+        imgElement.innerHTML = `<img src="${images[index]}" alt="示意圖片" style="max-width: 800px; max-height: 600px;">`;
+    }
+
+    imgElement.addEventListener("mouseover", stopSlideshow); // 鼠標移入停止輪播
+    imgElement.addEventListener("mouseout", startSlideshow); // 鼠標移出開始輪播
+    function showAPCS() {
+        ;
+    }
+</script>
 <style>
+    #containerPhoto {
+        margin: 50px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        background-color: #fff1df;
+    }
     .container {
     flex-direction: column;
     text-align: center;
