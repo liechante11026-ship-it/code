@@ -91,20 +91,10 @@
                                 APCS(2020/10/17) 3/2
                             </div>
 
-                            <div id="APCS_ceri" style="display: none; max-width: 400px; max-height: 300px;">
-                                <img src="ceri/apcs.webp" alt="示意圖片" style="max-width: 100%; max-height: 100%;">
+                            <div id="APCS_image" style="display: none; max-width: 400px; max-height: 300px;">
+                                <img src="image/apcs.png" alt="示意圖片" style="max-width: 100%; max-height: 100%;">
                             </div>
-
-                            <div id="TOEIC" onMouseOver="showTOEIC()" style="width: 500px;">
-                                TOEIC(2020/10/17) 550
-                            </div>
-
-                            <div id="TOEIC_ceri" style="display: none; max-width: 400px; max-height: 300px;">
-                                <img src="ceri/toeic.jpeg" alt="示意圖片" style="max-width: 100%; max-height: 100%;">  
-                            </div>
-
-                            <iframe width="800px" height="600px" src="file/代數學一.pdf" title="file example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                            
                 </div>
             </h6>
             <h8> 
@@ -132,7 +122,8 @@
 <script>
     let images = [
         "image/羊毛氈-1.jpg",
-        "image/袖珍屋-1.jpg"
+        "image/袖珍屋-1.jpg",
+        "image/apcs.png"
     ];
     let index = 0;
     let imgElement = document.getElementById("containerPhoto");
@@ -142,7 +133,7 @@
             index = (index + 1) % images.length;
             imgElement.innerHTML = `<img src="${images[index]}" alt="示意圖片" style="width: 800px; max-height: 600px;">`;
             
-        }, 3000);
+        }, 1000);
     }
     function stopSlideshow() {
         clearInterval(timer);
@@ -154,8 +145,12 @@
 
     imgElement.addEventListener("mouseover", stopSlideshow); // 鼠標移入停止輪播
     imgElement.addEventListener("mouseout", startSlideshow); // 鼠標移出開始輪播
-    function showAPCS() {
-        ;
+        function showAPCS() {
+        document.getElementById("APCS_image").style.display = "block";
+    }
+
+    function hideAPCS() {
+        document.getElementById("APCS_image").style.display = "none";
     }
 </script>
 <style>
@@ -169,23 +164,23 @@
         background-color: #fff1df;
     }
     .container {
-    flex-direction: column;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    /* margin: 30px auto; */
-    /* gap: 20px;  元素之間的間距 */
-    background-color: #ffd398;
-    }
-     .text {
-    padding-right: 0;
-    margin-bottom: 20px;
-    flex: 1;
-    padding-right: 20px;
-    font-size: 18px;
-    }
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+        /* margin: 30px auto; */
+        /* gap: 20px;  元素之間的間距 */
+        background-color: #ffd398;
+        }
+        .text {
+        padding-right: 0;
+        margin-bottom: 20px;
+        flex: 1;
+        padding-right: 20px;
+        font-size: 18px;
+        }
     .card {
         display: flex; 
         align-items: center; /* 垂直置中 */
